@@ -31,7 +31,7 @@ namespace ConsoleApp1
             // Wait for the user to hit <Enter>
             Console.ReadLine();
         }
-        
+
         private static void TimerCallback(Object o)
         {
             //List all processes with names similar to WORD
@@ -43,7 +43,6 @@ namespace ConsoleApp1
             Console.ReadLine();
             GC.Collect();
         }
-
         public static void SearchProcesses(string processName)
         {
             try
@@ -53,7 +52,7 @@ namespace ConsoleApp1
                 Console.WriteLine("PROCURANDO O PROCESSO COM O NOME: {0}", processName);
                 Console.WriteLine("");
                 //initialize the select query with command text
-                SelectQuery query = new SelectQuery(@"SELECT * FROM Win32_Process where Name LIKE '%"+ processName + "%'");
+                SelectQuery query = new SelectQuery(@"SELECT * FROM Win32_Process where Name LIKE '%" + processName + "%'");
                 //initialize the searcher with the query it is
                 //supposed to execute
                 using (ManagementObjectSearcher searcher = new ManagementObjectSearcher(query))
@@ -95,10 +94,8 @@ namespace ConsoleApp1
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error occured while executing the query: {0}",   ex.Message);
+                Console.WriteLine("Error occured while executing the query: {0}", ex.Message);
             }
         }
     }
-
 }
-
