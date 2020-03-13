@@ -40,7 +40,7 @@ namespace ConsoleApp1
         {
             SearchProcesses("WinoverDesktop");
             Console.ReadLine();
-            //GC.Collect();
+            GC.Collect();
         }
         public static void SearchProcesses(string processName)
         {
