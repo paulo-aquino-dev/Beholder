@@ -1,0 +1,10 @@
+﻿[*.cs]
+
+# CA1031: Não capturar exceptions de tipos genéricos
+dotnet_diagnostic.CA1031.severity = none
+
+# IDE0040: Adicionar modificadores de acessibilidade
+dotnet_style_require_accessibility_modifiers = for_non_interface_members:none
+
+# CA1060: Mover pinvokes para a classe de métodos nativos
+dotnet_diagnostic.CA1060.severity = none
